@@ -23,4 +23,4 @@ jobs:
           node-version: 22
 
       - name: Validate HTML
-        run: npx --yes html-validate "public/**/*.html"
+        run: npx --yes html-validate@11 "public/**/*.html"

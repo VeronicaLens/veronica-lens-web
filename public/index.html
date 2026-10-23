@@ -3,11 +3,103 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Veronica Lens</title>
+    <meta name="theme-color" content="#080b17">
+    <meta name="description" content="Explore o céu, registre suas descobertas e aprenda astronomia com o VeronicaLens. O universo mais perto de você.">
+    <title>VeronicaLens | O universo mais perto de você</title>
+    <link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/lucide.min.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
   <body>
-    <h1>Veronica Lens</h1>
-    <script src="js/main.js"></script>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <div class="hero-sky" id="inicio">
+      <header class="site-header container">
+        <a class="brand" href="#inicio" aria-label="VeronicaLens, início">
+          <img src="assets/brand-mark.svg" width="40" height="40" alt="">
+          <span>Veronica<span class="brand-accent">Lens</span></span>
+        </a>
+        <button class="menu-toggle icon-button" type="button" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <a class="nav-link active" href="#inicio" aria-current="location">Início</a>
+          <a class="nav-link" href="#sobre">Sobre</a>
+          <a class="nav-link" href="#recursos">Recursos</a>
+          <a class="nav-link" href="#suporte">Suporte</a>
+          <button class="button button-small" type="button" data-download><i data-lucide="download" aria-hidden="true"></i>Baixar o app</button>
+        </nav>
+      </header>
+
+      <main id="conteudo">
+        <section class="hero container" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Explorar <span>·</span> Registrar <span>·</span> Aprender</p>
+            <h1 id="hero-title">VeronicaLens<span class="hero-tagline">O universo<br>mais perto de <em>você.</em></span></h1>
+            <p class="hero-description">Seu guia para observar o céu, registrar imagens incríveis e transformar a curiosidade em descobertas. Astronomia de um jeito simples, no seu ritmo.</p>
+            <button class="button hero-button" type="button" data-download><i data-lucide="download" aria-hidden="true"></i>Baixar o app<span class="button-arrow" aria-hidden="true">↗</span></button>
+            <p class="hero-meta">Feito para curiosos <span>·</span> De todos os níveis</p>
+          </div>
+          <div class="hero-visual">
+            <div class="phone hero-phone">
+              <div class="phone-camera" aria-hidden="true"></div>
+              <img class="phone-screen" src="assets/camera.jpeg" width="738" height="1600" alt="Tela de exploração do VeronicaLens mostrando Órion, Betelgeuse e Sirius no céu estrelado" fetchpriority="high">
+            </div>
+            <div class="handwritten" aria-hidden="true">Aponte a câmera<br>e descubra<br>um novo universo.<span>⤵</span></div>
+            <div class="visual-caption"><span class="live-dot"></span> Um novo olhar para o céu</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <section class="features" id="recursos" aria-label="Recursos do VeronicaLens">
+      <div class="feature-grid container">
+        <article class="feature"><div class="feature-icon"><i data-lucide="camera" aria-hidden="true"></i></div><h2>Fotografia astronômica</h2><p>Registre suas descobertas e guarde um pedacinho do céu com você.</p></article>
+        <article class="feature"><div class="feature-icon"><i data-lucide="calendar-days" aria-hidden="true"></i></div><h2>Fenômenos celestes</h2><p>Fique por dentro de eclipses, chuvas de meteoros e encontros planetários.</p></article>
+        <article class="feature"><div class="feature-icon"><i data-lucide="graduation-cap" aria-hidden="true"></i></div><h2>Trilhas de aprendizado</h2><p>Da primeira estrela às grandes perguntas. Aprenda no seu próprio ritmo.</p></article>
+        <article class="feature"><div class="feature-icon"><i data-lucide="scan-line" aria-hidden="true"></i></div><h2>Exploração do céu</h2><p>Descubra constelações e conheça os objetos celestes ao seu redor.</p></article>
+      </div>
+    </section>
+
+    <section class="explore-section" id="sobre" aria-labelledby="explore-title">
+      <div class="explore container">
+        <div class="explore-copy">
+          <p class="eyebrow">Descubra o céu</p>
+          <h2 id="explore-title">Toda grande descoberta<br>começa com <em>um olhar.</em></h2>
+          <p>Do primeiro olhar às grandes descobertas, o VeronicaLens reúne ferramentas, conhecimento e inspiração para tornar a astronomia parte da sua vida.</p>
+          <p>Você não precisa saber por onde começar. Só precisa olhar para cima.</p>
+          <a class="button button-outline" href="#telas">Conheça a experiência<i data-lucide="arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <section class="app-showcase" id="telas" aria-label="Telas do aplicativo">
+          <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="floating-label label-events"><span class="label-icon"><i data-lucide="calendar-days" aria-hidden="true"></i></span><div><small>Não perca o próximo</small><strong>Encontro com o céu</strong></div><span class="tiny-star" aria-hidden="true">✦</span></div>
+          <div class="phone showcase-phone"><div class="phone-camera" aria-hidden="true"></div><img class="phone-screen" src="assets/home.jpeg" width="738" height="1600" alt="Tela inicial do VeronicaLens com condições de observação, próximos eventos e acesso ao aprendizado" loading="lazy"></div>
+          <div class="floating-label label-journey"><span class="label-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span><div><small>Cada descoberta conta</small><strong>Sua jornada começa aqui</strong></div></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="download-section container" id="download" aria-labelledby="download-title">
+      <div class="download-banner">
+        <div class="download-copy"><p class="eyebrow">Pronto para explorar?</p><h2 id="download-title">O próximo capítulo<br>é sob as estrelas.</h2><p>Leve o VeronicaLens com você.</p><button class="store-button" type="button" data-download><img src="assets/google-play.png" width="35" height="35" alt=""><span><small>EM BREVE NO</small><strong>Google Play</strong></span></button></div>
+      </div>
+    </section>
+
+    <section class="support-section container" id="suporte" aria-labelledby="support-title">
+      <div><p class="eyebrow">Vamos conversar</p><h2 id="support-title">A curiosidade conecta a gente.</h2><p>Tem uma dúvida, uma ideia ou algo para compartilhar?</p></div>
+      <a class="button button-outline" href="https://github.com/VeronicaLens/veronica-lens-web/issues" target="_blank" rel="noopener noreferrer">Converse com a gente<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+    </section>
+
+    <footer class="site-footer container">
+      <a class="brand" href="#inicio" aria-label="VeronicaLens, voltar ao início"><img src="assets/brand-mark.svg" width="34" height="34" alt=""><span>Veronica<span class="brand-accent">Lens</span></span></a>
+      <nav aria-label="Links do rodapé"><a href="#sobre">Sobre o projeto</a><a href="privacidade/">Política de privacidade</a><a href="excluir-conta/">Exclusão de conta</a><a href="#suporte">Suporte</a></nav>
+      <p>Feito para quem olha para cima.</p>
+    </footer>
+
+    <dialog class="info-dialog" id="download-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close icon-button" type="button" data-close aria-label="Fechar"><i data-lucide="x" aria-hidden="true"></i></button>
+      <span class="dialog-symbol"><i data-lucide="orbit" aria-hidden="true"></i></span><p class="eyebrow">Uma nova perspectiva</p><h2 id="dialog-title">Estamos preparando<br>a próxima descoberta.</h2><p>O VeronicaLens está em desenvolvimento. O download estará disponível aqui quando o aplicativo for publicado na Google Play.</p><button class="button" type="button" data-close>Continuar explorando<i data-lucide="arrow-right" aria-hidden="true"></i></button>
+    </dialog>
   </body>
 </html>

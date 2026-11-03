@@ -33,10 +33,13 @@ public/
 		style.css
 	js/
 		main.js
+		confirmacao.js
 		lucide.min.js
 	privacidade/
 		index.html
 	excluir-conta/
+		index.html
+	conta-confirmada/
 		index.html
 .github/
 	workflows/
@@ -51,6 +54,7 @@ public/
 | `/` | Apresentacao do aplicativo |
 | `/privacidade/` | Politica de privacidade |
 | `/excluir-conta/` | Exclusao de conta e dados |
+| `/conta-confirmada/` | Destino do link de confirmacao de cadastro (`EMAIL_CONFIRMATION_REDIRECT_URL` da API) |
 
 As paginas legais sao acessiveis sem login ou JavaScript. O botao de solicitacao de exclusao abre o cliente de e-mail; ele nao executa a exclusao automaticamente.
 

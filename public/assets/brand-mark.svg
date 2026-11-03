@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" role="img" aria-labelledby="title">
+  <title id="title">VeronicaLens</title>
+  <defs>
+    <linearGradient id="ring" x1="270" y1="130" x2="830" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E6EAFF" />
+      <stop offset="0.45" stop-color="#8F9CFF" />
+      <stop offset="1" stop-color="#B880FF" />
+    </linearGradient>
+    <linearGradient id="orbit" x1="-565" y1="70" x2="565" y2="-70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BDE3FF" />
+      <stop offset="0.5" stop-color="#F3EEFF" />
+      <stop offset="1" stop-color="#E7A8FF" />
+    </linearGradient>
+    <linearGradient id="star" x1="335" y1="404" x2="755" y2="404" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6F82FF" />
+      <stop offset="0.36" stop-color="#B9C2FF" />
+      <stop offset="0.5" stop-color="#FFFFFF" />
+      <stop offset="0.64" stop-color="#E2C6FF" />
+      <stop offset="1" stop-color="#B56BFF" />
+    </linearGradient>
+    <radialGradient id="core" cx="545" cy="404" r="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" />
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0.85" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="planet" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#FFFFFF" />
+      <stop offset="1" stop-color="#EDB9FF" />
+    </radialGradient>
+    <clipPath id="front"><rect x="-700" y="0" width="1400" height="400" /></clipPath>
+    <clipPath id="back"><rect x="-700" y="-400" width="1400" height="400" /></clipPath>
+    <mask id="outside-lens" maskUnits="userSpaceOnUse" x="-100" y="-100" width="1500" height="1200">
+      <rect x="-100" y="-100" width="1500" height="1200" fill="#FFFFFF" />
+      <circle cx="545" cy="404" r="289" fill="#000000" />
+    </mask>
+    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="translate(55 196)" filter="url(#glow)">
+    <!-- orbit, back half: hidden behind the lens -->
+    <g mask="url(#outside-lens)">
+      <g transform="translate(578 420) rotate(-18)" clip-path="url(#back)">
+        <path
+          fill="url(#orbit)"
+          fill-rule="evenodd"
+          d="M-565 0A565 182 0 1 0 565 0A565 182 0 1 0 -565 0ZM-533 -10A533 168 0 1 1 533 -10A533 168 0 1 1 -533 -10Z"
+        />
+      </g>
+    </g>
+
+    <!-- lens: double ring and corner arcs -->
+    <circle cx="545" cy="404" r="275" stroke="url(#ring)" stroke-width="24" />
+    <circle cx="545" cy="404" r="256" stroke="#F4F2FF" stroke-opacity="0.85" stroke-width="3" />
+    <g stroke="#F4F2FF" stroke-opacity="0.9" stroke-width="4" stroke-linecap="round">
+      <path d="M385.1 276.1A208 208 0 0 1 468.5 205.8" />
+      <path d="M621.5 205.8A208 208 0 0 1 704.9 276.1" />
+      <path d="M704.9 531.9A208 208 0 0 1 621.5 602.2" />
+      <path d="M468.5 602.2A208 208 0 0 1 385.1 531.9" />
+    </g>
+
+    <!-- star -->
+    <path
+      d="M545 189C545 366 583 404 755 404C583 404 545 442 545 619C545 442 507 404 335 404C507 404 545 366 545 189Z"
+      fill="url(#star)"
+    />
+    <circle cx="545" cy="404" r="70" fill="url(#core)" />
+
+    <!-- crosshair ticks -->
+    <path
+      d="M545 79V179M545 629V729M220 404H320M770 404H870"
+      stroke="url(#ring)"
+      stroke-width="12"
+      stroke-linecap="round"
+    />
+
+    <!-- orbit, front half -->
+    <g transform="translate(578 420) rotate(-18)" clip-path="url(#front)">
+      <path
+        fill="url(#orbit)"
+        fill-rule="evenodd"
+        d="M-565 0A565 182 0 1 0 565 0A565 182 0 1 0 -565 0ZM-533 -10A533 168 0 1 1 533 -10A533 168 0 1 1 -533 -10Z"
+      />
+    </g>
+
+    <circle cx="958" cy="191" r="34" fill="url(#planet)" />
+  </g>
+</svg>
